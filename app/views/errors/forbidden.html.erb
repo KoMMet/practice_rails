@@ -1,0 +1,13 @@
+<div id='error'>
+  <h1>403 Forbidden</h1>
+  <p>
+  <%=
+    case @exception
+    when ApplicationController::IpAddressRejected
+      'you cannot service for your ip address'
+    else
+      '権限エラー'
+    end
+  %>
+  </p>
+</div>
